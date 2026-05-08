@@ -1,0 +1,20 @@
+# Ignorar diretórios do Terraform em qualquer profundidade
+**/.terraform/*
+
+# Ignorar arquivos de estado (contêm segredos e dados sensíveis)
+*.tfstate
+*.tfstate.*
+terraform.tfstate*
+
+# Ignorar o arquivo de log de erros
+crash.log
+*.log
+
+# Ignorar variáveis sensíveis (MUITO IMPORTANTE)
+# Se você tiver senhas no .tfvars, descomente a linha abaixo:
+# *.tfvars
+
+# Arquivos de sistema
+.DS_Store
+.idea/
+.vscode/
