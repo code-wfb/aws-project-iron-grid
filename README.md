@@ -1,69 +1,24 @@
-# AWS IronGrid: Intelligent Cloud Resilience & AIOps 🚀
+# 🛡️ IronGrid AI - Autonomous AIOps Dashboard
 
-[![Terraform](https://img.shields.io/badge/Terraform-1.0+-623CE4.svg?style=flat&logo=terraform)](https://www.terraform.io/)
-[![AWS](https://img.shields.io/badge/AWS-Cloud-orange.svg?style=flat&logo=amazon-aws)](https://aws.amazon.com/)
-[![GenAI](https://img.shields.io/badge/AI-Amazon_Bedrock-blue.svg?style=flat&logo=openai)](https://aws.amazon.com/bedrock/)
+**IronGrid AI** is an intelligent observability and automated remediation platform designed to reduce MTTR (Mean Time To Repair) in mission-critical cloud environments.
 
-**IronGrid** is a high-availability hybrid networking architecture designed for mission-critical operations. Originally inspired by the rigorous demands of the broadcast industry, it has evolved into an **AIOps-driven platform** that leverages Generative AI to ensure 99.9% uptime.
+## 🚀 The Challenge
+Manual troubleshooting of BGP failures and infrastructure drifts can take hours. IronGrid bridges the gap between detection and resolution by integrating Generative AI directly into the DevOps workflow.
 
-## 🌟 Key Features
+## 🧠 How it Works
+1. **Detection:** Monitors infrastructure for drifts or connectivity failures.
+2. **Analysis:** Sends logs to **Amazon Bedrock (Claude 3.5 Sonnet)** to identify root causes.
+3. **Remediation:** Generates and executes **Terraform** payloads automatically.
+4. **Governance:** Opens, updates, and resolves tickets via **Jira API** for full auditability.
 
-- **Hybrid Resilience:** Automated failover between AWS Direct Connect and Site-to-Site VPN using BGP.
-- **AIOps Diagnostics:** Real-time Root Cause Analysis (RCA) powered by **Amazon Bedrock (Claude 3.5 Sonnet)**.
-- **Traffic Inspection:** Deep Packet Inspection (DPI) via **Gateway Load Balancer (GWLB)** and GENEVE protocol.
-- **Infrastructure as Code:** 100% automated deployment using modular Terraform.
+## 🛠️ Tech Stack
+- **AI:** Amazon Bedrock (Claude 3.5 Sonnet)
+- **Infrastructure:** Terraform & AWS
+- **Dashboard:** Streamlit & Python
+- **Governance:** Jira Service Management API
 
-## 🧠 The AIOps Layer (New!)
+## 📺 Demo
+Check out the `Video-Dashboard-Iron-Grid-AI.mp4` file in this repository for a full walkthrough.
 
-The "Intelligence Layer" moves beyond simple monitoring. When a network anomaly is detected:
-1. **CloudWatch** captures the event (BGP flap, latency spike, or failover).
-2. An **AWS Lambda** function is triggered, sending the raw logs to **Amazon Bedrock**.
-3. **Claude 3.5 Sonnet** analyzes the logs and provides a human-readable diagnostic, suggesting immediate remediation steps and CLI commands to fix the issue.
-
-> **Result:** Drastic reduction in **MTTR** (Mean Time To Repair) and operational overhead.
-
-## 🏗️ Architecture
-
-
-
-- **VPC / Networking:** Transit Gateway, Private Subnets, and Multi-AZ deployment.
-- **Security:** Security Groups, NACLs, and GWLB for centralized traffic inspection.
-- **Compute:** Auto Scaling Groups for resilient application delivery.
-- **AI/ML:** Amazon Bedrock (Anthropic Claude 3.5) & AWS Lambda.
-
-## 🛠️ Project Structure
-
-```text
-.
-├── terraform/
-│   ├── environments/       # Dev/Prod configurations
-│   ├── modules/
-│   │   ├── network/        # VPC, Transit Gateway, BGP
-│   │   ├── compute/        # EC2, Auto Scaling
-│   │   ├── security/       # IAM, GWLB, Security Groups
-│   │   └── ai/             # Bedrock, Lambda, AIOps Logic
-└── scripts/                # Helper scripts for automation
-
-🚀 How to Deploy
-
-    Initialize Terraform:
-    Bash
-
-    terraform init
-
-    Review the plan:
-    Bash
-
-    terraform plan
-
-    Apply the infrastructure:
-    Bash
-
-    terraform apply
-
-👨‍💻 Author
-
-Wallace – Cloud Infrastructure Engineer
-Specialist in Resilience, Mission-Critical Systems, and Cloud Architecture.
-
-This project is part of my technical portfolio to demonstrate advanced AWS networking and AIOps capabilities.
+---
+*Developed by Wallace - Cloud & SRE Engineering*
