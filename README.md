@@ -18,7 +18,11 @@ Manual troubleshooting of BGP failures and infrastructure drifts can take hours.
 - **Governance:** Jira Service Management API
 
 ## 📺 Demo
-Check out the `Video-Dashboard-Iron-Grid-AI.mp4` file in this repository for a full walkthrough.
+
+<video src="Video-Dashboard-Iron-Grid-AI.mp4" controls="controls" style="max-width: 100%;">
+  O seu navegador não suporta o player de vídeo.
+</video>
+
 
 ---
 *Developed by Wallace - Cloud & SRE Engineering*
